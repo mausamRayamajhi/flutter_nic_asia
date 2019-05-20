@@ -11,4 +11,4 @@ Visit (https://www.mausamrayamajhi.com.np/)
  - Responsive Ui
 
 ## NIC ASIA CLONE
- <img height="480px" src="screenshots/one.gif">  &nbsp; &nbsp; <img height="480px" src="screenshots/two.jpg">  &nbsp; &nbsp; <img height="480px" src="screenshots/three.jpg">      
+ <img height="480px" src="screenshots/one.gif">       
