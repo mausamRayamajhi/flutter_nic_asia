@@ -1,16 +1,14 @@
-# nic_asia
+# Flutter UI Challenges
+My effort on replicating various apps UI on flutter.
 
-A new Flutter project.
+## Credits
+This Ui sample is taken from NIC ASIA Bank app from Google play store.
 
-## Getting Started
+## For More UI Challanges 
+Visit (https://www.mausamrayamajhi.com.np/)
 
-This project is a starting point for a Flutter application.
+### Whats implemented
+ - Responsive Ui
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Ecommerce
+ <img height="480px" src="screenshots/one.gif">  &nbsp; &nbsp; <img height="480px" src="screenshots/two.jpg">  &nbsp; &nbsp; <img height="480px" src="screenshots/three.jpg">      
