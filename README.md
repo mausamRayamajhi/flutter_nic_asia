@@ -10,5 +10,5 @@ Visit (https://www.mausamrayamajhi.com.np/)
 ### Whats implemented
  - Responsive Ui
 
-## Ecommerce
+## NIC ASIA CLONE
  <img height="480px" src="screenshots/one.gif">  &nbsp; &nbsp; <img height="480px" src="screenshots/two.jpg">  &nbsp; &nbsp; <img height="480px" src="screenshots/three.jpg">      
