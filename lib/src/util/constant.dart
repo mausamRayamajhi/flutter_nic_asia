@@ -13,3 +13,12 @@ final List imageList = [
   {'name': 'sas', 'title': 'Sasto Tickets'},
   {'name': 'icon_more', 'title': 'Load More'},
 ];
+
+final List categories = [
+  {'image': path + 'ic_username.png', 'title': 'My Account'},
+  {'image': path + 'esewa.jpg', 'title': 'Load eSewa'},
+  {'image': path + 'ic_payments_64_4.png', 'title': 'Payment'},
+  {'image': path + 'ic_transfer_32_4.png', 'title': 'Fund Transfer'},
+  {'image': path + 'ic_sch_payment_64_4.png', 'title': 'Schedule Payment'},
+  {'image': path + 'ic_scan2pay_64_4.png', 'title': 'Scan To Pay'},
+];

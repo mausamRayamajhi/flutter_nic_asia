@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nic_asia/src/util/constant.dart';
+import 'package:nic_asia/src/widget/dashboard/categories.dart';
+import 'package:nic_asia/src/widget/dashboard/last_transactions.dart';
 import 'package:nic_asia/src/widget/dashboard/top_account_info.dart';
 
 class Dashboard extends StatelessWidget {
@@ -16,7 +18,27 @@ class Dashboard extends StatelessWidget {
             color: primaryColor,
             height: deviceSize.height * 0.1,
           ),
-          TopAccountInfo(),
+          Container(
+            margin: EdgeInsets.symmetric(
+              horizontal: deviceSize.width * 0.03,
+            ),
+            child: Column(
+              children: <Widget>[
+                TopAccountInfo(),
+                Container(
+                  height: 500.0,
+                  child: ListView(
+                    physics: BouncingScrollPhysics(),
+                    shrinkWrap: true,
+                    children: <Widget>[
+                      Categories(),
+                      LastTransactions(),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

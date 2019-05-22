@@ -8,7 +8,7 @@ class TopAccountInfo extends StatelessWidget {
     return Card(
       elevation: 3.0,
       margin: EdgeInsets.symmetric(
-        horizontal: deviceSize.width * 0.03,
+        //horizontal: deviceSize.width * 0.03,
         vertical: deviceSize.height * 0.02,
       ),
       child: Container(
