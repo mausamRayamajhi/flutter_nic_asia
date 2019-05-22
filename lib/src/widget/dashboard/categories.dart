@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nic_asia/src/util/constant.dart';
-import 'package:nic_asia/src/widget/dashboard/single_category.dart';
+import 'package:nic_asia/src/widget/dashboard/category.dart';
 
 import '../heading.dart';
 
@@ -28,7 +28,7 @@ class Categories extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             // primary: true,
             children: categories
-                .map((item) => SingleCategory(
+                .map((item) => Category(
                       title: item['title'],
                       image: item['image'],
                     ))

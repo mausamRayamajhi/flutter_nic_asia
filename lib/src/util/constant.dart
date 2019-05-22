@@ -22,3 +22,71 @@ final List categories = [
   {'image': path + 'ic_sch_payment_64_4.png', 'title': 'Schedule Payment'},
   {'image': path + 'ic_scan2pay_64_4.png', 'title': 'Scan To Pay'},
 ];
+
+final List transactions = [
+  Trx(
+    type: 'cwdr/',
+    number: '974884/9874513365478965',
+    amount: '10,000.00',
+    date: '10-06-2019',
+  ),
+  Trx(
+    type: 'cwdr/',
+    number: '974884/9874513365478965',
+    amount: '10,000.00',
+    date: '10-06-2019',
+  ),
+  Trx(
+    type: 'cwdr/',
+    number: '974884/9874513365478965',
+    amount: '10,000.00',
+    date: '10-06-2019',
+  ),
+  Trx(
+    type: 'cwdr/',
+    number: '974884/9874513365478965',
+    amount: '10,000.00',
+    date: '10-06-2019',
+  ),
+  Trx(
+    type: 'cwdr/',
+    number: '974884/9874513365478965',
+    amount: '10,000.00',
+    date: '10-06-2019',
+  ),
+  Trx(
+    type: 'cwdr/',
+    number: '974884/9874513365478965',
+    amount: '10,000.00',
+    date: '10-06-2019',
+  ),
+  Trx(
+    type: 'cwdr/',
+    number: '974884/9874513365478965',
+    amount: '10,000.00',
+    date: '10-06-2019',
+  ),
+  Trx(
+    type: 'cwdr/',
+    number: '974884/9874513365478965',
+    amount: '10,000.00',
+    date: '10-06-2019',
+  ),
+  Trx(
+    type: 'cwdr/',
+    number: '974884/9874513365478965',
+    amount: '10,000.00',
+    date: '10-06-2019',
+  ),
+  Trx(
+    type: 'cwdr/',
+    number: '974884/9874513365478965',
+    amount: '10,000.00',
+    date: '10-06-2019',
+  ),
+];
+
+class Trx {
+  final String type, number, amount, date;
+  Trx({this.type, this.amount, this.date, this.number});
+}

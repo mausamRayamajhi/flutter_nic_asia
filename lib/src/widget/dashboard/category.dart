@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class SingleCategory extends StatelessWidget {
+class Category extends StatelessWidget {
   final String image, title;
-  SingleCategory({this.title, this.image});
+  Category({this.title, this.image});
   @override
   Widget build(BuildContext context) {
     return Card(
