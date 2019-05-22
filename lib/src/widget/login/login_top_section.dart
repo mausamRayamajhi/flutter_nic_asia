@@ -7,7 +7,7 @@ class LoginTopSection extends StatelessWidget {
   Widget build(BuildContext context) {
     Size deviceSize = MediaQuery.of(context).size;
     return Container(
-      height: deviceSize.height * 0.3,
+      height: deviceSize.height * 0.27,
       margin: EdgeInsets.symmetric(
         horizontal: 20.0,
       ),
@@ -33,7 +33,7 @@ class LoginTopSection extends StatelessWidget {
           Container(
             height: deviceSize.height < 700
                 ? deviceSize.height * 0.19
-                : deviceSize.height * 0.21,
+                : deviceSize.height * 0.18,
             child: GridView.count(
               crossAxisCount: 3,
               children: imageList
@@ -41,7 +41,7 @@ class LoginTopSection extends StatelessWidget {
                         children: <Widget>[
                           Image.asset(
                             '$path${item['name']}.png',
-                            height: 60.0,
+                            height: 50.0,
                           ),
                           SizedBox(
                             height: 10.0,

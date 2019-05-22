@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nic_asia/src/widget/login_input_sction.dart';
-import 'package:nic_asia/src/widget/login_top_section.dart';
+import 'package:nic_asia/src/widget/login/login_input_sction.dart';
+import 'package:nic_asia/src/widget/login/login_top_section.dart';
 
-class Login extends StatelessWidget {
+class LoginContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size deviceSize = MediaQuery.of(context).size;
@@ -25,6 +25,7 @@ class Login extends StatelessWidget {
             ),
             Column(
               children: <Widget>[
+                SizedBox(height: 25.0),
                 buildLogo(deviceSize),
                 SizedBox(
                   height: 20.0,

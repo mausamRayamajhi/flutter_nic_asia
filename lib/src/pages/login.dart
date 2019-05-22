@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nic_asia/src/util/constant.dart';
-import 'package:nic_asia/src/widget/login.dart';
+import 'package:nic_asia/src/widget/login/login_container.dart';
 
-class App extends StatelessWidget {
+class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Login(),
+      body: LoginContainer(),
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
         child: Image.asset(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nic_asia/src/util/constant.dart';
-import 'package:nic_asia/src/widget/custome_input.dart';
+import 'package:nic_asia/src/widget/login/custome_input.dart';
 
 class LoginInputSection extends StatelessWidget {
   @override
@@ -71,7 +71,9 @@ class LoginInputSection extends StatelessWidget {
                       MaterialButton(
                         color: primaryColorLight,
                         height: 50.0,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).popAndPushNamed('/dashboard');
+                        },
                         child: Row(
                           children: <Widget>[
                             SizedBox(width: deviceSize.width * 0.25),
