@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nic_asia/src/pages/dashboard.dart';
 import 'package:nic_asia/src/util/constant.dart';
 import 'package:nic_asia/src/widget/login/custome_input.dart';
 
@@ -72,7 +73,8 @@ class LoginInputSection extends StatelessWidget {
                         color: primaryColorLight,
                         height: 50.0,
                         onPressed: () {
-                          Navigator.of(context).popAndPushNamed('/dashboard');
+                          Navigator.of(context)
+                              .pushReplacementNamed('/dashboard');
                         },
                         child: Row(
                           children: <Widget>[
