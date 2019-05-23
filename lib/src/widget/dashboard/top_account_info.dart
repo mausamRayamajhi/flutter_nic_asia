@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nic_asia/src/util/constant.dart';
+import 'package:nic_asia/src/widget/profile_image.dart';
 
 class TopAccountInfo extends StatelessWidget {
   @override
@@ -21,7 +22,7 @@ class TopAccountInfo extends StatelessWidget {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                buildUserImage,
+                ProfileImage(),
                 buildAcountDetail,
               ],
             ),
@@ -97,23 +98,6 @@ class TopAccountInfo extends StatelessWidget {
           ),
         ),
       ],
-    ),
-  );
-
-  final buildUserImage = Container(
-    width: 100.0,
-    height: 100.0,
-    decoration: BoxDecoration(
-      shape: BoxShape.circle,
-      color: Colors.red,
-      image: DecorationImage(
-        image: AssetImage('assets/image/profile.jpg'),
-        fit: BoxFit.contain,
-      ),
-      border: Border.all(
-        color: primaryColor,
-        width: 3.0,
-      ),
     ),
   );
 }
