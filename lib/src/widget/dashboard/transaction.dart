@@ -4,8 +4,10 @@ import 'package:nic_asia/src/util/constant.dart';
 class Transaction extends StatelessWidget {
   final Trx transaction;
   Transaction({this.transaction});
+
   @override
   Widget build(BuildContext context) {
+    print('${transaction.amount}');
     Size deviceSize = MediaQuery.of(context).size;
     return Padding(
       padding: EdgeInsets.only(bottom: 15.0),
@@ -34,7 +36,7 @@ class Transaction extends StatelessWidget {
                   transaction.type.toUpperCase(),
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
-                    fontSize: 17.0,
+                    fontSize: 14.0,
                   ),
                 ),
                 Row(
@@ -44,20 +46,20 @@ class Transaction extends StatelessWidget {
                       transaction.number.toUpperCase(),
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
-                        fontSize: 17.0,
+                        fontSize: 14.0,
                       ),
                     ),
                     Text(
                       'NPR. ' + transaction.amount.toUpperCase(),
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
-                        fontSize: 17.0,
+                        fontSize: 14.0,
                       ),
                     ),
                   ],
                 ),
                 SizedBox(
-                  height: 10.0,
+                  height: 5.0,
                 ),
                 Text(
                   transaction.date.toUpperCase(),

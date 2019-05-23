@@ -20,16 +20,19 @@ class LastTransactions extends StatelessWidget {
         SizedBox(
           height: 25.0,
         ),
-        Container(
-          height: transactions.length * deviceSize.height * 0.15,
-          //  color: Colors.red,
-          child: ListView.builder(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemCount: transactions.length,
-            itemBuilder: (context, int index) => Transaction(
-                  transaction: transactions[index],
-                ),
+        Flexible(
+          child: Container(
+            // color: Colors.red,
+            height: deviceSize.height * 0.3,
+            child: ListView.builder(
+              shrinkWrap: true,
+              // physics: NeverScrollableScrollPhysics(),
+              physics: BouncingScrollPhysics(),
+              itemCount: transactions.length,
+              itemBuilder: (context, int index) => Transaction(
+                    transaction: transactions[index],
+                  ),
+            ),
           ),
         ),
       ],

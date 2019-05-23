@@ -25,9 +25,8 @@ class Dashboard extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 TopAccountInfo(),
-                Container(
-                  // color: Colors.yellow,
-                  height: 500.0,
+                Flexible(
+                  fit: FlexFit.tight,
                   child: ListView(
                     physics: BouncingScrollPhysics(),
                     shrinkWrap: true,

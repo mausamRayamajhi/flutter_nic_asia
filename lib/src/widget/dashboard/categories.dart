@@ -20,8 +20,8 @@ class Categories extends StatelessWidget {
         SizedBox(
           height: 25.0,
         ),
-        Container(
-          height: deviceSize.height * 0.33,
+        Flexible(
+          fit: FlexFit.loose,
           child: GridView.count(
             crossAxisCount: 3,
             shrinkWrap: true,
