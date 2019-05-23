@@ -4,13 +4,21 @@ import 'package:nic_asia/src/util/constant.dart';
 import 'package:nic_asia/src/widget/dashboard/categories.dart';
 import 'package:nic_asia/src/widget/dashboard/last_transactions.dart';
 import 'package:nic_asia/src/widget/dashboard/top_account_info.dart';
+import 'package:nic_asia/src/widget/profile_image.dart';
 
 class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size deviceSize = MediaQuery.of(context).size;
     return Scaffold(
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            buildUserInfo,
+            buildDrawerItem,
+          ],
+        ),
+      ),
       appBar: buildAppBar(),
       body: Stack(
         children: <Widget>[
@@ -43,6 +51,109 @@ class Dashboard extends StatelessWidget {
       ),
     );
   }
+
+  final buildDrawerItem = Flexible(
+    child: Container(
+      color: drawerColoSecondary,
+      padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              for (Draw item in drawerItems)
+                ListTile(
+                  leading: Icon(
+                    item.icon,
+                    color: Colors.white70,
+                  ),
+                  title: Text(
+                    item.title,
+                    style: TextStyle(
+                      color: Colors.white70,
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.lock,
+              color: Colors.white,
+            ),
+            title: Text(
+              'Logout',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+
+  final buildUserInfo = Container(
+    color: drawerColoPrimary,
+    //height: deviceSize.height * 0.3,
+    padding: EdgeInsets.only(bottom: 25.0),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Good Afternoon!',
+              style: TextStyle(
+                fontSize: 14.0,
+                fontWeight: FontWeight.w300,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              'MAUSAM'.toUpperCase(),
+              style: TextStyle(
+                fontSize: 17.0,
+                fontWeight: FontWeight.w300,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 15.0,
+        ),
+        ProfileImage(
+          color: Colors.white,
+          height: 70.0,
+          width: 70.0,
+        ),
+        SizedBox(
+          height: 15.0,
+        ),
+        Text(
+          'MAUSAM rayamajhi'.toUpperCase(),
+          style: TextStyle(
+            fontSize: 15.0,
+            fontWeight: FontWeight.w300,
+            color: Colors.white,
+          ),
+        )
+      ],
+    ),
+  );
 
   AppBar buildAppBar() {
     return AppBar(

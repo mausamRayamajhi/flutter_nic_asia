@@ -2,8 +2,19 @@ import 'package:flutter/material.dart';
 
 const Color primaryColor = Color(0xFFD20910);
 const Color primaryColorLight = Color(0xFFED1B2E);
+const Color drawerColoPrimary = Color(0xFF88070B);
+const Color drawerColoSecondary = Color(0xFFCF0A11);
 
 final String path = 'assets/image/';
+
+final List<Draw> drawerItems = [
+  Draw(title: 'Quick Payment', icon: Icons.photo_camera),
+  Draw(title: 'Favorite Account', icon: Icons.supervised_user_circle),
+  Draw(title: 'Invoice History', icon: Icons.receipt),
+  Draw(title: 'Complain', icon: Icons.speaker_notes),
+  Draw(title: 'Activity Log', icon: Icons.assessment),
+  Draw(title: 'Settings', icon: Icons.settings),
+];
 final List imageList = [
   {'name': 'el', 'title': 'Electricity'},
   {'name': 'air', 'title': 'Airlines'},
@@ -89,4 +100,10 @@ final List transactions = [
 class Trx {
   final String type, number, amount, date;
   Trx({this.type, this.amount, this.date, this.number});
+}
+
+class Draw {
+  final String title;
+  final IconData icon;
+  Draw({this.title, this.icon});
 }
