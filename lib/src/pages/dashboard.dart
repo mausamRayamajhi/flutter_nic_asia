@@ -14,7 +14,7 @@ class Dashboard extends StatelessWidget {
       drawer: Drawer(
         child: Column(
           children: <Widget>[
-            buildUserInfo,
+            buildUserInfo(context),
             buildDrawerItem,
           ],
         ),
@@ -94,66 +94,69 @@ class Dashboard extends StatelessWidget {
     ),
   );
 
-  final buildUserInfo = Container(
-    color: drawerColoPrimary,
-    //height: deviceSize.height * 0.3,
-    padding: EdgeInsets.only(bottom: 25.0),
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        ListTile(
-          leading: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
-        ),
-        Row(
+  buildUserInfo(context) => Container(
+        color: drawerColoPrimary,
+        //height: deviceSize.height * 0.3,
+        padding: EdgeInsets.only(bottom: 25.0),
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text(
-              'Good Afternoon!',
-              style: TextStyle(
-                fontSize: 14.0,
-                fontWeight: FontWeight.w300,
+            ListTile(
+              onTap: () {
+                Navigator.of(context).pop();
+              },
+              leading: Icon(
+                Icons.arrow_back,
                 color: Colors.white,
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  'Good Afternoon!',
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  'MAUSAM'.toUpperCase(),
+                  style: TextStyle(
+                    fontSize: 17.0,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
             ),
             SizedBox(
-              width: 5,
+              height: 15.0,
+            ),
+            ProfileImage(
+              color: Colors.white,
+              height: 70.0,
+              width: 70.0,
+            ),
+            SizedBox(
+              height: 15.0,
             ),
             Text(
-              'MAUSAM'.toUpperCase(),
+              'MAUSAM rayamajhi'.toUpperCase(),
               style: TextStyle(
-                fontSize: 17.0,
+                fontSize: 15.0,
                 fontWeight: FontWeight.w300,
                 color: Colors.white,
               ),
-            ),
+            )
           ],
         ),
-        SizedBox(
-          height: 15.0,
-        ),
-        ProfileImage(
-          color: Colors.white,
-          height: 70.0,
-          width: 70.0,
-        ),
-        SizedBox(
-          height: 15.0,
-        ),
-        Text(
-          'MAUSAM rayamajhi'.toUpperCase(),
-          style: TextStyle(
-            fontSize: 15.0,
-            fontWeight: FontWeight.w300,
-            color: Colors.white,
-          ),
-        )
-      ],
-    ),
-  );
+      );
 
   AppBar buildAppBar() {
     return AppBar(
