@@ -7,7 +7,6 @@ import '../heading.dart';
 class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size deviceSize = MediaQuery.of(context).size;
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
